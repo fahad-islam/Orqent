@@ -1,0 +1,42 @@
+{
+  "name": "@orqent/domain",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Canonical Orqent domain IDs, Effect Schemas, statuses, and typed errors.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./errors": {
+      "types": "./dist/errors.d.ts",
+      "default": "./dist/errors.js"
+    },
+    "./ids": {
+      "types": "./dist/ids.d.ts",
+      "default": "./dist/ids.js"
+    },
+    "./schemas": {
+      "types": "./dist/schemas.d.ts",
+      "default": "./dist/schemas.js"
+    },
+    "./statuses": {
+      "types": "./dist/statuses.d.ts",
+      "default": "./dist/statuses.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "effect": "3.21.3"
+  }
+}
